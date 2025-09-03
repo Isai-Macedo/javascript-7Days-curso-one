@@ -1,0 +1,289 @@
+/* ==== RESET Y ESTILOS BASE ==== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+  color: #333;
+}
+
+main {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 750px;
+}
+
+/* ==== TITULOS ==== */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+/* ==== CONTENIDO ==== */
+#contenido {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* ==== LISTAS DEL MENÚ PRINCIPAL ==== */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+nav ul li {
+  margin: 0.8rem 0;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background: #4a90e2;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: #357abd;
+  transform: scale(1.05);
+}
+
+/* ==== ESTILIZAR INPUTS Y BOTONES EN RETOS ==== */
+#contenido label,
+#contenido input,
+#contenido button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+#contenido input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#contenido button {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#contenido button:hover {
+  background: #218838;
+  transform: scale(1.03);
+}
+
+#resultado {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* ==== BOTONES DE NAVEGACIÓN EN RETOS ==== */
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  background: #28a745;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+nav a:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+/* ==== RESPUESTA DE RETOS ==== */
+pre,
+code {
+  background: #1e1e1e;
+  color: #dcdcdc;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 500px) {
+  main {
+    padding: 2rem;
+  }
+
+  nav a {
+    padding: 8px 16px;
+    margin: 5px 0;
+    display: block;
+  }
+
+  nav ul li a {
+    padding: 8px;
+  }
+}
+
+/* ==== ESTILOS DEL JUEGO INTERACTIVO ==== */
+
+/* Contenedores de cada paso */
+#paso1,
+#paso2,
+#paso3,
+#paso4 {
+  background: #f4f6f9;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Mostrar paso actual con animación */
+#paso1.show,
+#paso2.show,
+#paso3.show,
+#paso4.show {
+  display: block;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Labels */
+#contenido label,
+#paso1 label,
+#paso2 label,
+#paso3 label,
+#paso4 label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #2c3e50;
+}
+
+/* Selects e inputs */
+#paso1 select,
+#paso2 select,
+#paso3 select,
+#paso4 input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+#paso1 select:focus,
+#paso2 select:focus,
+#paso3 select:focus,
+#paso4 input:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+/* Botones del juego */
+#paso1 button,
+#paso2 button,
+#paso3 button,
+#paso4 button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#paso1 button:hover,
+#paso2 button:hover,
+#paso3 button:hover,
+#paso4 button:hover {
+  background: #0056b3;
+  transform: scale(1.03);
+}
+
+/* Lista de tecnologías agregadas */
+#listaTec {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#listaTec li {
+  background: #e9f7ef;
+  color: #155724;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Contenedor de contenido final (resumen) */
+#contenido p {
+  background: #f0f4f8;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border-left: 5px solid #28a745;
+}
+
+/* Responsive: mejorar visualización en móviles */
+@media (max-width: 500px) {
+  #paso1,
+  #paso2,
+  #paso3,
+  #paso4 {
+    padding: 15px;
+  }
+
+  #paso1 button,
+  #paso2 button,
+  #paso3 button,
+  #paso4 button {
+    width: 100%;
+    padding: 12px;
+  }
+}
