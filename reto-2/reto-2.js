@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("resultadosAlerta").textContent = "😕 Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?";
         }
       }, 500);
-
       activaLimpiar();
     }
   });
@@ -38,11 +37,9 @@ function valoresOriginales() {
   document.querySelector('#usuarioEdad').value = "";
   document.querySelector('#usuarioLenguaje').value = "";
   document.getElementById("usuarioNombre").focus();
-  document.getElementById("resultados").style.visibility = "hidden";
   document.getElementById("resultados").innerHTML = "";
   document.getElementById("alerta").style.visibility = "hidden";
   document.getElementById("alerta").innerHTML = "";
-  document.getElementById("resultadosAlerta").style.visibility = "hidden";
   document.getElementById("resultadosAlerta").innerHTML = "";
   document.getElementById("btnAceptar").disabled = false;
   document.getElementById("btnLimpiar").disabled = true;
