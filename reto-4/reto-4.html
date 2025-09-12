@@ -19,14 +19,21 @@
           </div>
           <div class="card-body">
             <h5 class="card-title p-2">Resultados: </h5>
-            
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Ingresa tu número: </span>
+              <input id="txtNumero" type="text" class="form-control" placeholder="Ej. 8" autocomplete="off" aria-describedby="basic-addon1">
+              <button id="btnAceptar" class="btn btn-primary" type="button" onclick="valoresRegistro()" >Aceptar</button>
+              <button id="btnLimpiar" class="btn btn-danger" type="button" onclick="valoresOriginales()" disabled>Cancelar</button>
+            </div>
+            <div id="contadorIntentos" class="card-text w-100 text-left"></div>
             <div id="alerta" class="alert alert-warning mt-3" role="alert"></div>
+            <div id="resultados" class="alert alert-primary mt-3"></div>
           </div>
           <div class="card-footer text-body-secondary text-center">
             <div class="btn-group text-center">
-              <a href="../reto-2/reto-2.html" class="btn btn-primary">Anterios Reto</a>
+              <a href="../reto-3/reto-3.html" class="btn btn-primary">Anterios Reto</a>
               <a href="../index.html" class="btn btn-primary">Volver a Menú</a>
-              <a href="../reto-4/reto-4.html" class="btn btn-primary">Siguiente Reto</a>
+              <a href="../reto-5/reto-5.html" class="btn btn-primary">Siguiente Reto</a>
             </div>
           </div>
         </div>
