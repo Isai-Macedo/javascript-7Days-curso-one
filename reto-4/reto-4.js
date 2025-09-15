@@ -68,7 +68,7 @@ function valoresRegistro() {
     visionAlerta(`alerta`, `Número no correcto. Ingrese un número del 1 al ${limiteNumeroOculto}`);
   } else {
     if (listaNumero.length == limiteIntentos) {
-      visionAlerta(`resultados`, `Llegaste a tu limite de intentos. El número osulto es: ${numeroOculto}`);
+      visionAlerta(`resultados`, `Llegaste a tu limite de intentos. El número oculto es: ${numeroOculto}`);
       document.getElementById("btnAceptar").disabled = true;
       document.getElementById("btnLimpiar").disabled = false;
     } else {
